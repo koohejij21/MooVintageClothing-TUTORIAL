@@ -10,10 +10,19 @@
             "image_bg": "shopify:\/\/shop_images\/hero-work.png",
             "image_hover": "shopify:\/\/shop_images\/hero-work-hover.png"
           }
+        },
+        "d690ebc1-1413-4d6d-bcde-cccf700abd33": {
+          "type": "collection",
+          "settings": {
+            "collection": "beach",
+            "image_bg": "shopify:\/\/shop_images\/hero-beach.png",
+            "image_hover": "shopify:\/\/shop_images\/hero-beach-hover.png"
+          }
         }
       },
       "block_order": [
-        "deb0b545-a38a-42dc-abcc-073fd0ea7460"
+        "deb0b545-a38a-42dc-abcc-073fd0ea7460",
+        "d690ebc1-1413-4d6d-bcde-cccf700abd33"
       ],
       "settings": {
       }
