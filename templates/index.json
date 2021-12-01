@@ -6,7 +6,7 @@
         "deb0b545-a38a-42dc-abcc-073fd0ea7460": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "back-to-work",
             "image_bg": "shopify:\/\/shop_images\/hero-work.png",
             "image_hover": "shopify:\/\/shop_images\/hero-work-hover.png"
           }
