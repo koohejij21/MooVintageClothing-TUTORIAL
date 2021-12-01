@@ -13,3 +13,16 @@ gulp.task('sass', () => {
 gulp.task('watch', () => {
     gulp.watch('scss/**/*.scss', gulp.series('sass'));
 })
+
+
+/*
+npm i -D gulp gulp-sass gulp-postcss autoprefixer cssnano
+
+gulp.task('sass', () => {
+    return src('scss/*.scss', { sourcemaps: true })
+        .pipe(sass())
+        .pipe(postcss([autoprefixer(), cssnano()]))
+        .pipe(dest('assets', { sourcemaps: '.' }))
+});
+
+*/
