@@ -2,6 +2,19 @@
   "sections": {
     "16383553015ca4061c": {
       "type": "hero",
+      "blocks": {
+        "deb0b545-a38a-42dc-abcc-073fd0ea7460": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image_bg": "shopify:\/\/shop_images\/hero-work.png",
+            "image_hover": "shopify:\/\/shop_images\/hero-work-hover.png"
+          }
+        }
+      },
+      "block_order": [
+        "deb0b545-a38a-42dc-abcc-073fd0ea7460"
+      ],
       "settings": {
       }
     }
