@@ -8,19 +8,17 @@
         <a class="weekly-picks__item-link" href="{{ product.url }}">
           <div class="product-bubble bubble--{% if product.tags contains "New" %}new{% elsif product.tags contains "Fave" %}fave{% elsif product.compare_at_price != blank %}sale{% endif %}">
             <span>
-              {% if product.tags contains "New" %}      
-                <img src="{{ 'new.svg' | asset_url }}" loading="lazy" width="{{ image.width }}" height="{{ image.height }}"/>
-            {% elsif product.tags contains "Fave" %}
-                <img src="{{ 'staff.svg' | asset_url }}" loading="lazy" width="{{ image.width }}" height="{{ image.height }}"/>
-            <br/> 
-                <img src="{{ 'fave.svg' | asset_url }}" loading="lazy" width="{{ image.width }}" height="{{ image.height }}"/>
-            {% elsif product.compare_at_price != blank  %}
+              {% if product.tags contains "New" %}
+                new
+              {% elsif product.tags contains "Fave" %}
+                staff<br/>fave
+              {% elsif product.compare_at_price != blank  %}
                 sale
               {% endif %}
             </span>
           </div>
           <div class="weekly-picks__img-wrapper">
-            <img src="{{ product.images[0].src | img_url: 'medium' }}" loading = 'lazy'  width="{{ image.width }}" height="{{ image.height }}" />
+            <img src="{{ product.images[0].src | img_url: 'medium' }}" loading = 'lazy'  width="{{ product.image.width }}" height="{{ product.image.height }}" />
           </div>
           <p class="weekly-picks__product-title">{{ product.title }}</p>
           <div class="weekly-picks__price">
