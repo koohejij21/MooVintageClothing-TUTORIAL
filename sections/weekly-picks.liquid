@@ -1,5 +1,19 @@
 <div class="">
-    Weekly Picks
+    <h2>Picks of the week</h2>
+    <div class="">
+        {% for product in section.settings.collection.products %}
+            <div class="">
+                <a href="">
+                    <p>{{ product.title }}e</p>
+                    <div class="">
+                        <span>
+                            {{ product.price | money}}
+                        </span>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
 </div>
 
 {% schema %}
