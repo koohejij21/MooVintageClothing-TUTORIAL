@@ -22,36 +22,36 @@
 </div>
 
 {% schema %}
+
 {
-  "name": "Hero",
-  "blocks": [
-    {
-      "type": "collection",
-      "limit": 3,
-      "name": "Collection",
-      "settings": [
+    "name": "Hero",
+    "blocks": [
         {
-          "type": "collection",
-          "id": "collection",
-          "label": "Collection"
-        },
-        {
-          "type": "image_picker",
-          "id": "image_bg",
-          "label": "Image background"
-        },
-        {
-          "type": "image_picker",
-          "id": "image_hover",
-          "label": "Image Hover"
+            "type": "collection",
+            "limit": 3,
+            "name": "Collection",
+            "settings": [
+                {
+                    "type": "collection",
+                    "id": "collection",
+                    "label": "Collection"
+                }, {
+                    "type": "image_picker",
+                    "id": "image_bg",
+                    "label": "Image background"
+                }, {
+                    "type": "image_picker",
+                    "id": "image_hover",
+                    "label": "Image Hover"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "Hero"
-    }
-  ]
+    ],
+    "presets": [
+        {
+            "name": "Hero"
+        }
+    ]
 }
+
 {% endschema %}
