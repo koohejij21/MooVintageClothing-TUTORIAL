@@ -1,5 +1,5 @@
 {
-  "name": "MooVintageClothing",
+  "name": "moovintageclothing",
   "version": "1.0.0",
   "description": "[![Build status](https://github.com/shopify/dawn/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Shopify/dawn/actions/workflows/ci.yml?query=branch%3Amain)\r [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?color=informational)](/.github/CONTRIBUTING.md)",
   "main": "index.js",
@@ -22,6 +22,9 @@
     "gulp-autoprefixer": "^8.0.0",
     "gulp-sass": "^5.0.0",
     "node-sass": "^6.0.1",
-    "sass": "^1.44.0"
+    "sass": "^1.44.0",
+    "postcss": "^8.4.4",
+    "gulp-postcss": "^9.0.1",
+    "cssnano": "^5.0.12"
   }
 }
