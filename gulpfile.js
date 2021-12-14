@@ -1,28 +1,32 @@
-const gulp = require('gulp');
+// Initialize modules
+const {
+    src,
+    dest,
+    watch,
+    series
+} = require('gulp');
+
 const sass = require('gulp-sass')(require('sass'));
-const autoprefixer = require('gulp-autoprefixer')
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
 
-
-gulp.task('sass', () => {
-    return gulp.src('scss/*.scss')
-        .pipe(sass())
-        .pipe(autoprefixer('last 4 version'))
-        .pipe(gulp.dest('assets'))
-});
-
-gulp.task('watch', () => {
-    gulp.watch('scss/**/*.scss', gulp.series('sass'));
-})
-
-
-/*
-npm i -D gulp gulp-sass gulp-postcss autoprefixer cssnano
-
-gulp.task('sass', () => {
-    return src('scss/*.scss', { sourcemaps: true })
+// Sass Task
+const scssTask = () => {
+    return src('scss/**/*.scss', {
+            sourcemaps: true
+        })
         .pipe(sass())
         .pipe(postcss([autoprefixer(), cssnano()]))
-        .pipe(dest('assets', { sourcemaps: '.' }))
-});
+        .pipe(dest('assets', {
+            sourcemaps: '.'
+        }));
+}
 
-*/
+const watchTask = () => {
+    watch('scss/**/*.scss', series(scssTask));
+
+}
+
+// Default Gulp Task
+exports.default = series(scssTask, watchTask);
