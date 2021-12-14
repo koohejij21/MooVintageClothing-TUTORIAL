@@ -1982,6 +1982,9 @@ input[type='checkbox'] {
 @media screen and (min-width: 990px) {
     .header__heading-link {
         margin-left: -0.75rem;
+        background-color: #fff;
+        z-index: 10;
+        position: relative;
     }
 
     .header__heading,

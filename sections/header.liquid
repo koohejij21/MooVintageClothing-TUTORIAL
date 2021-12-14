@@ -334,10 +334,8 @@
       </details-modal>
     {%- endif -%}
 
-    {%- if request.page_type == 'index' -%}
-      <h1 class="header__heading">
-    {%- endif -%}
-        <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
+    {%- unless request.page_type == 'index' -%}
+      <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
           {%- if section.settings.logo != blank -%}
             {%- assign image_size = section.settings.logo_width | append: 'x' -%}
             <img srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
@@ -352,9 +350,7 @@
             <span class="h2">{{ shop.name }}</span>
           {%- endif -%}
         </a>
-    {%- if request.page_type == 'index' -%}
-      </h1>
-    {%- endif -%}
+    {%- endunless -%}
 
     {%- if section.settings.menu != blank -%}
       <nav class="header__inline-menu">
@@ -619,14 +615,14 @@ customElements.define('sticky-header', StickyHeader);
 <script type="application/ld+json">
 
 
-[36mLine: 1[0m
-[31m[36 mLine : 2 [[0m
-[31m        0 m [[0m
-[31m            31 m(empty line)[[0m
-[31m                0 m [[0m
-[31m                    31 m(empty line)[[0m
-[31m                        0 m [[0m
-[31m                            31 m[[0m
+[36mLine: 2[0m
+[31m(empty line)[0m
+[31m(empty line)[0m
+[31m[36mLine: 1[0m[0m
+[31m[31m[36 mLine : 1 [[0m[0m
+[31m[31m        0 m [[0m[0m
+[31m[31m            31 m[[0m[0m
+[31m[31m                36 mLine : 2 [[0m[0m
 
 </script>
 
@@ -635,14 +631,14 @@ customElements.define('sticky-header', StickyHeader);
   <script type="application/ld+json">
 
 
-[36mLine: 1[0m
-[31m[36 mLine : 2 [[0m
-[31m        0 m [[0m
-[31m            31 m(empty line)[[0m
-[31m                0 m [[0m
-[31m                    31 m(empty line)[[0m
-[31m                        0 m [[0m
-[31m                            31 m[[0m
+[36mLine: 2[0m
+[31m(empty line)[0m
+[31m(empty line)[0m
+[31m[36mLine: 1[0m[0m
+[31m[31m[36 mLine : 1 [[0m[0m
+[31m[31m        0 m [[0m[0m
+[31m[31m            31 m[[0m[0m
+[31m[31m                36 mLine : 2 [[0m[0m
 
 </script>
 {%- endif -%}
