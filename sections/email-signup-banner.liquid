@@ -6,20 +6,20 @@
 
 {%- style -%}
 
-#Banner-{{section.id}}::after {
-    opacity: {{section.settings.image_overlay_opacity | divided_by: 100.0}};
+#Banner-{{ section.id }}::after {
+    opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
 }
 {%- if section.settings.image_height == 'adapt-image' and section.settings.image != blank -%}
     @media screen and(max-width: 749px) {
-        #Banner-{{section.id}}:not(.banner--mobile-bottom) .banner__content::before {
-            padding-bottom: {{1 | divided_by: section.settings.image.aspect_ratio | times: 100}}%;
+        #Banner-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
+            padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
             content: '';
             display: block;
         }
     }
 
-    #Banner-{{section.id}}: : before, #Banner-{{section.id}}.banner__media::before {
-        padding-bottom: {{1 | divided_by: section.settings.image.aspect_ratio | times: 100}}%;
+    #Banner-{{ section.id }}: : before, #Banner-{{section.id}}.banner__media::before {
+        padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
         content: '';
         display: block;
     }
@@ -77,7 +77,6 @@
 </div>
 
 {% schema %}
-
 {
     "name": "t:sections.email-signup-banner.name",
     "tag": "section",
@@ -225,5 +224,4 @@
     ],
     "templates": ["password"]
 }
-
 {% endschema %}
